@@ -36,116 +36,7 @@ int esEntero(const string& str) {
 int CajasTotales = 0;
 int CajasDisponibles = 6;
 
-//void Cajero::ingresarCajero()
-//{
-//    Cajero *nuevoCajero = new Cajero();
-//    if (listaCajero==nullptr)
-//    {
-//        cout << "Ingrese ID: ";
-//        cin >> nuevoCajero->Id;
-//        cout << "Ingrese Nombre: ";
-//        cin >> nuevoCajero->nombre;
-//        while (true)
-//        {
-//            cout << "Ingrese Numero de Caja: ";
-//            cin >> nuevoCajero->numCaja;
-//            if (nuevoCajero->numCaja > CajasDisponibles)
-//                cout << "Solo existen " <<CajasDisponibles <<" cajas\n";
-//            else
-//                break;
-//        }
-//        
-//        listaCajero = nuevoCajero;
-//        listaCajero->despues = nullptr;
-//        listaCajero->atras = nullptr;
-//        CajasTotales++;
-//        cout << "Cajero Creado con Exito\n";
-//    }
-//    
-//    else
-//    {
-//        if (CajasTotales > 6)
-//        {
-//            cout << "No hay Cajas Disponibles\n";
-//            return;
-//        }
-//        else
-//        {
-//            cout << "Ingrese ID: ";
-//            cin >> nuevoCajero->Id;
-//            
-//            Cajero* aux = listaCajero;
-//            bool encontrado = false;
-//            
-//            while (aux!=nullptr)
-//            {
-//                if (nuevoCajero->Id == aux->Id)
-//                {
-//                    cout << "Cajero ya Existente\n";
-//                    cout << "Nombre:         " << aux->nombre << endl;
-//                    cout << "ID:             " << aux->Id << endl;
-//                    cout << "Numero de Caja: " << aux->numCaja << endl;
-//                    delete nuevoCajero; // se elimina ya que no se utilizó.
-//                    encontrado = true;
-//                }
-//                aux = aux->despues;
-//            }
-//            
-//            if (!encontrado)
-//            {
-//                cout << "Ingrese Nombre: ";
-//                cin >> nuevoCajero->nombre;
-//                cout << "Cajas Disponibles\n";
-//                
-//                Cajero *aux2 = listaCajero;
-//                int contador = 1;
-//                
-//                while (contador <= CajasDisponibles)
-//                {
-//                    bool disponible = true;
-//                
-//                    while (aux2 != nullptr)
-//                    {
-//                        if (aux2->numCaja == contador)
-//                        {
-//                            disponible = false;
-//                            break;
-//                        }
-//                        aux2 = aux2->despues;
-//                    }
-//
-//                        if (disponible)
-//                            cout << contador << ") Disponible.\n";
-//                        else
-//                            cout << contador << ") No Disponible.\n";
-//
-//                        contador++;
-//                }
-//
-//                
-//                cout << "Ingrese Caja: ";
-//                cin >> nuevoCajero->numCaja;
-//                Cajero *aux3 = listaCajero;
-//                bool encontrado = false;
-//                
-//                while (aux3!=nullptr)
-//                {
-//                    if (aux3->numCaja == nuevoCajero->numCaja)
-//                    {
-//                        encontrado = true;
-//                        cout << "Numero de Caja ya Ocupada\n";
-//                        delete nuevoCajero;
-//                    }
-//                    aux3 = aux3->despues;
-//                }
-//                
-//  
-//                
-//            }
-//            
-//        }
-//    }
-//}
+
 
 //void Cajero::ingresarCajero() {
 //    if (cont_Caja >= 6) {
@@ -196,60 +87,12 @@ int CajasDisponibles = 6;
 //
 //}//fin del metodo agregar Cajero
 
-//void Cajero::mostrarCajero() {
-//	Cajero* p = listaCajero;
-//	while (p != NULL) {
-//		cout << endl << p->nombre;
 //
-//		p = p->despues;
-//	}
-//	cout << endl;
-//} //fin método listar Clientes
+//
+//
+//
 
 
-//void elimiar(Cajero*& N) {
-//
-//    if (N == nullptr) return;
-//
-//    if (N->atras != nullptr) {
-//        N->atras->despues = N->despues;
-//    }
-//    if (N->despues != nullptr) {
-//        N->despues->atras = N->atras;
-//    }
-//
-//    delete N; 
-//    N = nullptr;
-//}
-
-
-//void Cliente::mostrarPedido(string _nombre) {
-//	Cliente* p = listaCliente;
-//	bool encontrado = false;
-//	while (p != NULL)
-//	{
-//		if (p->nombre == _nombre && encontrado != true) {
-//			encontrado = true;
-//
-//			nodoPedido* aux = p->inicio;
-//			cout << "|-----------------------------------------|\n";
-//			if (aux!=NULL) {
-//				
-//				cout << "Los pedidos de " << p->nombre << " son:\n";
-//				while (aux != NULL)
-//				{
-//					cout << "\t ° " << aux->num << endl;
-//					aux = aux->despues;
-//				}
-//				cout << "Fin de pedidos de " << p->nombre << "\n";
-//			}
-//			else cout << p->nombre << " no ha realizado pedidos :(\n";
-//			cout << "|-----------------------------------------|\n\n";
-//		}
-//		else
-//			p = p->despues;
-//	}
-//}
 
 void Cajero::mostrarCajero() {
     Cajero* p = listaCajero;
@@ -265,7 +108,7 @@ void Cajero::mostrarCajero() {
         p = p->despues;
     }
     cout << endl;
-} //fin método listar cajeros
+} //fin mï¿½todo listar cajeros
 
 void Cajero::ingresarCajero()
 {
@@ -327,7 +170,7 @@ void Cajero::ingresarCajero()
                 cout << "Ingrese Nombre: ";
                 cin >> nuevoCajero->nombre;
                 cout << "Cajas Disponibles\n";
-               
+        
                 int contador = 1;
 
                 while (contador <= CajasDisponibles)
@@ -398,7 +241,7 @@ void Cajero::eliminarCajero(int id) {
 
     //Lista vacia?
     if (listaCajero == nullptr) {
-        cout << "Lista e cajeros está vacía.\n";
+        cout << "Lista e cajeros estï¿½ vacï¿½a.\n";
     }
     //Busqueda de nodo 
     while (actual != nullptr && actual->Id != id) {
@@ -413,7 +256,7 @@ void Cajero::eliminarCajero(int id) {
         listaCajero = actual->despues;// actualiza el inicio 
 
         if (listaCajero != nullptr) {
-            listaCajero->atras = nullptr;//Si la lista no queda vacía, actualizamos el puntero atrás del nuevo primero
+            listaCajero->atras = nullptr;//Si la lista no queda vacï¿½a, actualizamos el puntero atrï¿½s del nuevo primero
         }
     }
     else {
@@ -449,7 +292,7 @@ void Cajero::modificarCajero()
             {
                 cin.clear();
                 cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-                cout << "Entrada inválida. Por favor ingrese un número entero.\n";
+                cout << "Entrada invï¿½lida. Por favor ingrese un nï¿½mero entero.\n";
             }
             else
                 break;
@@ -513,7 +356,7 @@ void Cajero::modificarCajero()
                             {
                                 cin.clear();
                                 cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
-                                cout << "Entrada inválida. Por favor ingrese un número entero.\n";
+                                cout << "Entrada invï¿½lida. Por favor ingrese un nï¿½mero entero.\n";
                             }
                             else
                                 break;
