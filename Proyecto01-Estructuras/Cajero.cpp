@@ -87,10 +87,10 @@ int CajasDisponibles = 6;
 //
 //}//fin del metodo agregar Cajero
 
-
-
-
-
+//
+//
+//
+//
 
 
 
