@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-//#include "pedido.h"
 using namespace std;
 
 class Cliente {
@@ -20,8 +19,10 @@ public:
 	~Cliente();
 
 	void ingresarCliente();
-	void eliminarCliente(int);
-	void atendiendoCliente(int);
+	void mostrarCliente();
+	void eliminarCliente(string);
+	void atendiendoCliente();
+
 };
 
 #endif

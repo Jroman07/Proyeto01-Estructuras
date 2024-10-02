@@ -10,6 +10,7 @@ public:
 	int Id;
 	string nombre;
 	int numCaja;
+	int numClientes;
 	class Cajero* despues;
 	class Cajero* atras;
 
@@ -23,6 +24,7 @@ public:
 	void mostrarCajero();
 	void modificarCajero();
 	void eliminarCajero(int);
+	void asignarCliente();
 };
 
 #endif
