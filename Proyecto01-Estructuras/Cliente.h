@@ -20,7 +20,7 @@ public:
 
 	void ingresarCliente();
 	void mostrarCliente();
-	void eliminarCliente(string);
+	void eliminarCliente();
 	void atendiendoCliente();
 
 };

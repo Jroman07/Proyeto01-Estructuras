@@ -155,14 +155,16 @@ void Cliente::ingresarCliente() {
     }
 }
 
-void Cliente::eliminarCliente(string id) {
-
+void Cliente::eliminarCliente() {
+    string nombre;
+    cout << "Ingre el nombre del cliente a eliminar :";
+    getline(cin, nombre);
     if (listaCliente != nullptr) {
         Cliente* aux_borrar;
         Cliente* Atras = nullptr;
         aux_borrar = listaCliente;
 
-        while ((aux_borrar != NULL) && (aux_borrar->nombre != id)) {
+        while ((aux_borrar != NULL) && (aux_borrar->nombre != nombre)) {
             Atras = aux_borrar;
             aux_borrar = aux_borrar->despues;
         }
@@ -180,6 +182,9 @@ void Cliente::eliminarCliente(string id) {
             Atras->despues = aux_borrar->despues;
             delete aux_borrar;
         }
+    }
+    else {
+        cout << "La lista de clientes está vacía.\n";
     }
 
 }
